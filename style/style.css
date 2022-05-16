@@ -1,0 +1,328 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
+/* Colors */
+:root {
+  --primary-soft-blue: hsl(231, 69%, 60%);
+  --primary-soft-red: hsl(0, 94%, 66%);
+  --neutral-grayish-blue: hsl(229, 8%, 60%);
+  --neutral-very-dark-blue: hsl(229, 31%, 21%);
+}
+
+/* Body */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  color: var(--neutral-very-dark-blue);
+}
+
+p {
+  font-weight: 500;
+  color: var(--neutral-grayish-blue);
+}
+
+a {
+  text-decoration: none;
+}
+
+button.btn-1,
+button.btn-2 {
+  border: 2px solid transparent;
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 10px 20px !important;
+}
+
+button.btn-1 {
+  background-color: var(--primary-soft-blue);
+  color: #fff;
+}
+
+button.btn-2 {
+  background-color: #f0eeee;
+  color: var(--neutral-very-dark-blue);
+}
+
+button.btn-1:hover {
+  background-color: transparent;
+  border: 2px solid var(--primary-soft-blue);
+  color: var(--primary-soft-blue);
+}
+
+button.btn-2:hover {
+  border: 2px solid var(--neutral-very-dark-blue);
+}
+
+button.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* Navbar */
+nav.navbar li a {
+  color: var(--neutral-very-dark-blue);
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+nav .navbar-nav li:last-child a {
+  color: #fff;
+  background-color: var(--primary-soft-red);
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+nav .navbar-nav li:hover a,
+nav .navbar-nav li:focus a {
+  color: var(--primary-soft-red);
+  transition: 0.3s;
+}
+
+nav .navbar-nav li:last-child:hover a,
+nav .navbar-nav li:last-child:focus a {
+  background-color: #fff;
+  border: 1px solid var(--primary-soft-red);
+}
+
+nav div button.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Main */
+main {
+  color: var(--neutral-very-dark-blue);
+}
+
+/* Section - General */
+section {
+  color: var(--neutral-very-dark-blue);
+}
+
+/* Section 1 - Features */
+section div ul li.nav-item {
+  border-bottom: 1px solid hsla(229, 8%, 60%, 0.253);
+}
+
+section div ul li.nav-item a.nav-link {
+  border-bottom: 1px solid transparent;
+  font-weight: 500;
+  color: var(--neutral-grayish-blue);
+  transition: 0.3s;
+}
+
+section div ul li.nav-item a.nav-link:hover {
+  color: var(--primary-soft-red);
+}
+
+section div ul li.nav-item a.nav-link.active {
+  border-color: var(--primary-soft-red);
+  border-width: 0 0 3px;
+  color: var(--neutral-very-dark-blue);
+}
+
+/* Section 2 - Download */
+section div div.box {
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section 3 - Accordion */
+section div div.accordion h3.accordion-header button {
+  color: var(--neutral-very-dark-blue);
+  font-weight: 500;
+}
+
+section div div.accordion h3.accordion-header button:hover {
+  color: var(--primary-soft-red);
+}
+
+section div div.accordion button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+section div div.accordion button.accordion-button::after {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: auto;
+  content: "";
+  background-image: url("../images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+section div div.accordion button.accordion-button:not(.collapsed) {
+  background: transparent;
+}
+
+section div div.accordion button.accordion-button:not(.collapsed)::after {
+  filter: hue-rotate(90deg) !important;
+}
+
+/* Section 4 - Newsletter */
+section#newsletter {
+  color: #fff;
+}
+
+section div.newsletter {
+  background: var(--primary-soft-blue);
+}
+
+section div.newsletter small.text-uppercase {
+  letter-spacing: 5px;
+}
+
+section div.newsletter button.btn-newsletter {
+  background: var(--primary-soft-red);
+}
+
+section div.newsletter button.btn-newsletter:hover {
+  background: #fff;
+  color: var(--primary-soft-red);
+}
+
+section div.newsletter button.btn-newsletter:focus {
+  border-color: var(--primary-soft-red);
+  outline: 0;
+  box-shadow: 0 0 0 1px var(--primary-soft-red);
+  background-color: #fff;
+  color: var(--primary-soft-red);
+}
+
+section div.newsletter input {
+  padding: 10px 20px !important;
+}
+
+section div.newsletter input::placeholder {
+  color: var(--neutral-grayish-blue);
+}
+
+section div.newsletter input:focus {
+  border: 1px solid var(--primary-soft-red);
+  outline: 0;
+  box-shadow: 0 0 0 1px var(--primary-soft-red);
+}
+
+section div.newsletter form small.invalid-feedback {
+  background: var(--primary-soft-red);
+  padding: 5px 20px !important;
+  font-size: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--neutral-very-dark-blue);
+}
+
+footer div.container-fluid div.row {
+  height: 100px;
+}
+
+footer div a {
+  text-decoration: none;
+}
+
+footer div a.footer-link {
+  color: var(--neutral-grayish-blue) !important;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+footer div a.footer-link:hover {
+  color: var(--primary-soft-red) !important;
+}
+
+footer div i {
+  font-size: 20px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+footer div i:hover {
+  color: var(--primary-soft-red);
+}
+
+footer img.logo-footer {
+  filter: brightness(0) invert(1);
+}
+
+/* Responsive Web Design */
+
+@media (max-width: 400px) {
+  nav.navbar a {
+    color: #fff !important;
+    padding: 15px;
+  }
+
+  nav div div li {
+    border-top: 1px solid rgba(255, 255, 255, 0.301);
+  }
+
+  nav div .navbar-nav li:last-child a {
+    color: #fff;
+    background-color: transparent !important;
+    border: 2px solid #fff;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  nav div div.nav-icons {
+    height: 250px;
+  }
+
+  button.btn-1,
+  button.btn-2 {
+    padding: 10px 6px !important;
+    border: 1px solid transparent;
+  }
+
+  section div ul {
+    border-top: 1px solid hsla(229, 8%, 60%, 0.253);
+    border-bottom: 1px solid hsla(229, 8%, 60%, 0.253);
+  }
+
+  section div div.box button {
+    padding: 15px 25px !important;
+  }
+
+  section#accordion div {
+    width: 100% !important;
+  }
+
+  section#accordion div button.btn-1 {
+    padding: 10px 15px !important;
+  }
+
+  section div.newsletter small.text-uppercase {
+    letter-spacing: 2px;
+  }
+
+  section div.newsletter button.btn-newsletter {
+    width: 100%;
+  }
+
+  section div.newsletter button.btn-newsletter:hover {
+    background: var(--primary-soft-red);
+    color: #fff;
+  }
+
+  section div.newsletter button.btn-newsletter:hover {
+    border-color: var(--primary-soft-red);
+    outline: 0;
+    box-shadow: 0 0 0 1px var(--primary-soft-red);
+  }
+}
