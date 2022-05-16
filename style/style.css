@@ -321,7 +321,7 @@ footer img.logo-footer {
   }
 
   section div.newsletter button.btn-newsletter:hover {
-    border-color: var(--primary-soft-red);
+    border: none;
     outline: 0;
     box-shadow: 0 0 0 1px var(--primary-soft-red);
   }
